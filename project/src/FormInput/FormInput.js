@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Form from '../Forms/Form';
 import './FormInput.css';
+import Modal from '../Modal/Modal';
 import axios from '../axios-orders';
 
 
@@ -40,7 +41,8 @@ class FormInput extends Component {
                 value: ''
             }},
 
-            loading: false
+            loading: false,
+            submited: false
 
     }
 
@@ -60,6 +62,7 @@ class FormInput extends Component {
         })
         .catch( error => {this.setState( { loading: false } );
         });
+        this.setState({submited:true});
     }
 
 inputChangedHandler = (event, inputIdentifier) => {
@@ -73,6 +76,10 @@ inputChangedHandler = (event, inputIdentifier) => {
     updatedOrderForm[inputIdentifier] = updatedFormElement;
     this.setState({orderForm: updatedOrderForm});
 }
+
+    submitCanceler = () =>{
+        this.setState({submited:false})
+    }
 
 render () {
     const formElementsArray = [];
@@ -100,10 +107,14 @@ render () {
     // if ( this.state.loading ) {
     //     form = <Spinner />;
     // }
+    let confirmation = <div>Thank you for signing up!</div>
     return (
         <div className='ContactData'>
             <h4>Enter your Contact Data</h4>
             {form}
+            <Modal show={this.state.submited} onclick={this.submitCanceler}>
+                {confirmation}
+            </Modal>
         </div>
 );
 }
