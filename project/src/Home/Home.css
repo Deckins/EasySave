@@ -1,0 +1,29 @@
+.piggy{
+    border-radius: 100%;
+    height:200px;
+    width:200px;
+    /*margin: 0px auto;*/
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.body-container{
+    margin: 30px;
+    text-align:center;
+
+}
+.body-wrapper{
+    margin:100px 100px;
+}
+
+.statement{
+    font-family: Soleil_Light,Helvetica,Arial,sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.cards{
+    margin: 0px 20px;
+    display:inline-block;
+}
+
