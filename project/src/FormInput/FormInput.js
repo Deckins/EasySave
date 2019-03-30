@@ -58,11 +58,13 @@ class FormInput extends Component {
     axios.post( '/users.json', order )
         .then( response => {
         this.setState( { loading: false } );
-        this.props.history.push( '/' );
         })
         .catch( error => {this.setState( { loading: false } );
         });
         this.setState({submited:true});
+        // if(this.state.submited === false){
+        //     this.props.history.push('/');
+        // }
     }
 
 inputChangedHandler = (event, inputIdentifier) => {
@@ -79,7 +81,9 @@ inputChangedHandler = (event, inputIdentifier) => {
 
     submitCanceler = () =>{
         this.setState({submited:false})
-    }
+        this.props.history.push( '/' );
+
+}
 
 render () {
     const formElementsArray = [];
@@ -112,7 +116,7 @@ render () {
         <div className='ContactData'>
             <h4>Enter your Contact Data</h4>
             {form}
-            <Modal show={this.state.submited} onclick={this.submitCanceler}>
+            <Modal show={this.state.submited} modalClosed={this.submitCanceler}>
                 {confirmation}
             </Modal>
         </div>
