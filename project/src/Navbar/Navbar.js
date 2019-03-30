@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import './Navbar.css';
 import {Link} from 'react-router-dom';
-class Navbar extends Component {
+import {Navbar,Nav} from 'react-bootstrap';
+class NavBar extends Component {
     render() {
         return (
             <div className="bg-img">
-                <div className="container">
-                    <div className="topnav">
-                        <Link to ='/'><a href="/home">Home</a></Link>
-                        <Link to ='/about'><a href="/about">About</a></Link>
+            <Navbar bg="dark" variant="dark">
+            <Nav  className="justify-content-end" >
+            <div className='link-wrapper'>
+            <Link style={{ textDecoration: 'none', color: 'white',  margin:'10px 10px' }}  to="/">Home</Link>
 
-                     </div>
-                        <Link className ='top-right'to ='/login'><a  href='/'>Log In</a></Link>
-                        <Link className ='top-right'to ='/signup'><a href='/'>Sign Up </a></Link>
-
-                </div>
+            <Link style={{ textDecoration: 'none', color: 'white',  margin:'10px 10px' }}  to="/about">About</Link>
+                <Link style={{ textDecoration: 'none', color: 'white', margin:'10px 10px' }}  to="/signup" >Sign up</Link>
+            </div>
+            </Nav>
+            </Navbar>
             </div>
 
 
@@ -23,4 +24,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default NavBar;
