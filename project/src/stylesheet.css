@@ -1,0 +1,48 @@
+.Title {
+	width: 100%;
+	color: #00cc00;
+	background-color: #0039e6;
+	margin-bottom: 0px;
+	padding: 2px;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 30px;
+	border-bottom-color: 6px solid #00cc00;
+}
+
+h1 {
+    font-size: 85px;
+		margin: 5px;
+		border: 5px solid #00cc00;
+
+}
+
+div {
+  color: black;
+}
+
+body {
+background-color: #0039e6;
+color: Black;
+}
+
+.moneyimg {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+	position: center;
+	bottom: 100px;
+	margin-right: 750px;
+	margin-left: 750px;
+	background-color: #0039e6;
+	image-rendering: auto;
+}
+
+#div1{
+	background-color: #007acc;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

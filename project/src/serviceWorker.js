@@ -1,15 +1,7 @@
-// This optional code is used to register a service worker.
-// register() is not called by default.
+//This is a work in progress
+//This code is the building block of how the project will be run
 
-// This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
-// will only see deployed updates on subsequent visits to a page, after all the
-// existing tabs open on the page have been closed, since previously cached
-// resources are updated in the background.
-
-// To learn more about the benefits of this model and instructions on how to
-// opt-in, read http://bit.ly/CRA-PWA
-
+//The function will check if the localhost address is there or not
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -20,26 +12,25 @@ const isLocalhost = Boolean(
     )
 );
 
+//The function will check if the register and service worker
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
-      // Our service worker won't work if PUBLIC_URL is on a different origin
-      // from what our page is served on. This might happen if a CDN is used to
-      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+      //If the URL is not in the exact location from our page then it will just return
       return;
     }
 
     window.addEventListener('load', () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
+
       if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
+        //This will check if the service workers is there or not
         checkValidServiceWorker(swUrl, config);
 
-        // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
+        // Add some additional logging to localhost and will display the message
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
@@ -47,12 +38,13 @@ export function register(config) {
           );
         });
       } else {
-        // Is not localhost. Just register service worker
+        //If it is not a localhost.  It will register the service worker
         registerValidSW(swUrl, config);
       }
     });
   }
 }
+
 
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
@@ -66,9 +58,7 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
-              // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
+              // At this point, the updated precached content has been fetched and a message will be displayed
               console.log(
                 'New content is available and will be used when all ' +
                   'tabs for this page are closed. See http://bit.ly/CRA-PWA.'
@@ -79,9 +69,6 @@ function registerValidSW(swUrl, config) {
                 config.onUpdate(registration);
               }
             } else {
-              // At this point, everything has been precached.
-              // It's the perfect time to display a
-              // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
               // Execute callback
