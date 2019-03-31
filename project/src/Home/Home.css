@@ -6,7 +6,34 @@
     margin-left: auto;
     margin-right:auto;
 }
+.bg-img {
+    /* The image used */
+    background-image: url("../images/header.jpg");
 
+    min-height: 500px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
+    opacity:1;
+}
+.text{
+    z-index: 100;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica,sans-serif;
+    left: 150px;
+    top: 300px;
+    padding:50px 50px;
+    background-color:white;
+    color:black;
+    border-left:60px solid beige;
+}
 .body-container{
     margin: 30px;
     text-align:center;

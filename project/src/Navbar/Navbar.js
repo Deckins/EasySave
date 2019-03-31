@@ -5,7 +5,7 @@ import {Navbar,Nav} from 'react-bootstrap';
 class NavBar extends Component {
     render() {
         return (
-            <div className="bg-img">
+            <div>
             <Navbar bg="dark" variant="dark">
             <Nav  className="justify-content-end" >
             <div className='link-wrapper'>
@@ -16,6 +16,7 @@ class NavBar extends Component {
             </div>
             </Nav>
             </Navbar>
+
             </div>
 
 

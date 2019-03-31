@@ -3,21 +3,7 @@ body {
 }
 * {box-sizing: border-box;}
 
-.bg-img {
-    /* The image used */
-    background-image: url("../images/header.jpg");
 
-    min-height: 500px;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    /* Needed to position the navbar */
-    position: relative;
-    opacity:1;
-}
 
 /* Position the navbar container inside the image */
 .container {

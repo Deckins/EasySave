@@ -5,6 +5,11 @@ import {Card, CardDeck} from 'react-bootstrap';
 class Home extends Component {
     render() {
         return (
+            <div>
+            <div className="bg-img">
+                <p className='text'>Take control now!</p>
+
+            </div>
             <div className='body-wrapper'>
             <div className='body-container'>
                 <img className='piggy' src={piggy} alt='Here lies a piggy'/>
@@ -48,6 +53,7 @@ class Home extends Component {
         </Card>
 
         </CardDeck>
+        </div>
         </div>
     )
     }
