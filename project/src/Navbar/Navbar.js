@@ -12,7 +12,9 @@ class NavBar extends Component {
             <Link style={{ textDecoration: 'none', color: 'white',  margin:'10px 10px' }}  to="/">Home</Link>
 
             <Link style={{ textDecoration: 'none', color: 'white',  margin:'10px 10px' }}  to="/about">About</Link>
-                <Link style={{ textDecoration: 'none', color: 'white', margin:'10px 10px' }}  to="/signup" >Sign up</Link>
+            <Link style={{ textDecoration: 'none', color: 'white',  margin:'10px 10px' }}  to="/charts">Your Data</Link>
+
+            <Link style={{ textDecoration: 'none', color: 'white', margin:'10px 10px' }}  to="/signup" >Sign up</Link>
             </div>
             </Nav>
             </Navbar>
