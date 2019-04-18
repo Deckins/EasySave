@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import {Bar, Doughnut} from 'react-chartjs-2';
+import { defaults } from 'react-chartjs-2'
+import './Chart.css';
 
 
 class Charts extends Component {
     state={
-        data: {
-            labels: ["January", "February", "March" ],
+        bar: {
+            labels: ["January", "February", "March" ]
+            ,
+            fontColor:'white',
             datasets: [{
-                label: "My First dataset",
+                label: "Total Spending by Month",
                 data: [ 81, 56, 55, 40],
                 backgroundColor: ["#FF6384",
                     "#63FF84",
@@ -22,6 +26,7 @@ class Charts extends Component {
                 "Transporation",
                 "Entertainment"
             ],
+            fontColor:'white',
             datasets: [
                 {
                     data: [133.3, 86.2,  51.2, 50.2],
@@ -36,14 +41,29 @@ class Charts extends Component {
     }
 
     render() {
+        defaults.global.defaultFontColor = 'white'
         return (
-            < div >
-                <Doughnut data={this.state.pie} />
-                < Bar data={this.state.data} />
-
-        < /div>
-    )
-        ;
+            <div className="dashboard-wrapper">
+                <header className="top-header">Spending Dashboard</header>
+                <div className='chart-container'>
+                    <ul>
+                        <li>
+                            <Doughnut  width={400} height= {400} 
+                            options={{ maintainAspectRatio: false  ,responsive:false }}
+                            data={this.state.pie} 
+                            />
+                        </li>
+                        <li>
+                            <Bar  width={400} height= {400}  
+                            options={{ maintainAspectRatio: false ,responsive:false }} 
+                            data={this.state.bar} 
+                            />
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+    );
     }
 }
 

@@ -1,0 +1,55 @@
+html,body{
+    padding:0;
+    margin:0;
+}
+.top-header{
+    /* margin: 15px 15px; */
+    padding: 15px 15px;
+    font-family: arial;
+    font-style:bold;
+    color:white;
+    font-size:30px;
+
+}
+.dashboard-wrapper{
+    background-color:rgb(20, 63, 104);
+    background-image: linear-gradient(to bottom right ,rgb(7, 58, 105),rgb(65, 126, 184));
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+li{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color:rgb(13, 64, 105);
+    margin:10px 10px;
+    border-top: solid white 14px;
+    
+}
+
+.chart-container{
+    /* display: flex; */
+    /* margin:15px 15px;
+    padding:10px 10px; */
+    /* width:500px;
+    height:500px; */
+    /* overflow:hidden; */
+
+}
+
+.chart-wrapper{
+    background-color:rgb(22, 22, 122);
+    color:white;
+    padding:10px;
+}
