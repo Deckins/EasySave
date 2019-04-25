@@ -1,5 +1,4 @@
-//Kevin Huang
-//Work in Progress
+//Code Template
 
 import React from 'react';
 import ReactDOM from 'react-dom';

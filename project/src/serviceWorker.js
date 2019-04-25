@@ -1,12 +1,9 @@
-//This is a work in progress
 //This code is the building block of how the project will be run
 
 //The function will check if the localhost address is there or not
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
-    // [::1] is the IPv6 localhost address.
     window.location.hostname === '[::1]' ||
-    // 127.0.0.1/8 is considered localhost for IPv4.
     window.location.hostname.match(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
@@ -38,7 +35,7 @@ export function register(config) {
           );
         });
       } else {
-        //If it is not a localhost.  It will register the service worker
+
         registerValidSW(swUrl, config);
       }
     });

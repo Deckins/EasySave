@@ -1,5 +1,5 @@
-//This is still a work in progress.  These code could be modified
-//For now this is a template code and is the bulding block for the reactjs project
+//This is what create our web page in our local host
+//We import our work here which will help create the project
 
 import React, { Component } from 'react';
 import './App.css';
