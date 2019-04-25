@@ -6,12 +6,13 @@ import './App.css';
 import Navbar from './Navbar/Navbar';
 // import FormInput from './FormInput/FormInput';
 import SignIn from './SignIn/SignIn';
+import About from './About/About';
 import {Route,Switch} from 'react-router-dom';
 import Home from './Home/Home';
 import Charts from './Data/Charts';
 
 class App extends Component {
- 
+
   render() {
     return(
       <div>
@@ -22,6 +23,7 @@ class App extends Component {
                 <Navbar/>
             </Switch>
             <Route exact path='/' component ={Home}/>
+            <Route exact path='/' component ={About}/>
 
             </div>
     );
