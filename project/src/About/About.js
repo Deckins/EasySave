@@ -15,7 +15,7 @@ class About extends Component {
         <div className='body-wrapper'>
         <div className='body-container'>
             <img className='money' src={money} alt='Here is Money'/>
-            <p className='statement'>About GoSave</p>
+            <p className='statement'>About EasySave</p>
         </div>
 
         /* This is what our user will see to understand what our app is all about.*/
