@@ -1,0 +1,50 @@
+.money{
+    border-radius: 100%;
+    height:200px;
+    width:200px;
+    /*margin: 0px auto;*/
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.body-container{
+    margin: 30px;
+    text-align:center;
+
+}
+
+.body-wrapper{
+    margin:70px 100px;
+}
+
+.statement{
+    font-family: Soleil_Light,Helvetica,Arial,sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.state{
+	font-family: times new roman;
+	font-size: 14px;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("../images/header.jpg");
+
+    min-height: 500px;
+
+    /* Center and scale the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Position the navbar */
+    position: relative;
+    opacity:1;
+}
+
+.cards{
+    margin: 0px 20px;
+    display:inline-block;
+}

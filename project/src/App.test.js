@@ -1,5 +1,4 @@
 //This will  test to see if the app renders
-//This is a work in progress
 
 import React from 'react';
 import ReactDOM from 'react-dom';
