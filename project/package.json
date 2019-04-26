@@ -6,12 +6,14 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
+    "firebase": "^5.9.4",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.3",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-with-firebase-auth": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
