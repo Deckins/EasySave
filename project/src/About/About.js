@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import money from '../images/money.jpg';
 import './About.css';
-/*This will import the react features to customize the financial app*/
+<!--This will import the react features to customize the financial app -->
 import {Card, CardDeck} from 'react-bootstrap';
 class About extends Component {
     render() {
       return (
-        /* create the image for the beginning of the page*/
+        <!--create the image for the beginning of the page-->
         <div>
         <div className="bg-img">
 
@@ -18,9 +18,8 @@ class About extends Component {
             <p className='statement'>About EasySave</p>
         </div>
 
-        /* This is what our user will see to understand what our app is all about.*/
-        /* -----------------------------------------------------------------------*/
-        /*This part will talk about how our financial app works*/
+        <!-- This is what our user will see to understand what our app is all about. -->
+        <!--This part will talk about how our financial app works -->
        <CardDeck>
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >Using our app</Card.Header>
@@ -35,7 +34,7 @@ class About extends Component {
        </Card.Body>
        </Card>
 
-       /*This part will help explain to the users why we created this app and it's purpose*/
+       <!--This part will help explain to the users why we created this app -->
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >About EasySave</Card.Header>
        <Card.Body>
@@ -50,7 +49,7 @@ class About extends Component {
        </Card.Body>
        </Card>
 
-       /* This part will show users the features that we implemented in our financial app*/
+       <!-- This part will show users the features that we implemented in our financial app -->
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >Features</Card.Header>
        <Card.Body>
