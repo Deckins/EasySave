@@ -9,7 +9,6 @@ class About extends Component {
         <!--create the image for the beginning of the page-->
         <div>
         <div className="bg-img">
-
         </div>
 
         <div className='body-wrapper'>
