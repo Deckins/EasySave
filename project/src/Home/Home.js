@@ -10,9 +10,13 @@ class Home extends Component {
                 <p className='text'>Take control now!</p>
 
             </div>
+
+            <div id = "div1">
             <div className='body-wrapper'>
+            <br/>
             <div className='body-container'>
                 <img className='piggy' src={piggy} alt='Here lies a piggy'/>
+                <br/> <br/>
                 <p className='statement'>What matters to You?</p>
 
 
@@ -53,6 +57,10 @@ class Home extends Component {
         </Card>
 
         </CardDeck>
+
+        <br/> <br/>
+
+        </div>
         </div>
         </div>
     )

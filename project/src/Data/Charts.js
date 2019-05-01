@@ -48,19 +48,19 @@ class Charts extends Component {
                 <div className='chart-container'>
                     <ul>
                         <li>
-                            <Doughnut  width={400} height= {400} 
+                            <Doughnut  width={400} height= {400}
                             options={{ maintainAspectRatio: false  ,responsive:false }}
-                            data={this.state.pie} 
+                            data={this.state.pie}
                             />
                         </li>
                         <li>
-                            <Bar  width={400} height= {400}  
-                            options={{ maintainAspectRatio: false ,responsive:false }} 
-                            data={this.state.bar} 
+                            <Bar  width={400} height= {400}
+                            options={{ maintainAspectRatio: false ,responsive:false }}
+                            data={this.state.bar}
                             />
                         </li>
                     </ul>
-                   
+
                 </div>
             </div>
     );

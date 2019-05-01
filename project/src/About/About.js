@@ -1,24 +1,31 @@
 import React, {Component} from 'react';
 import money from '../images/money.jpg';
 import './About.css';
-<!--This will import the react features to customize the financial app -->
 import {Card, CardDeck} from 'react-bootstrap';
+{/*This will import the react features to customize the financial app*/}
+
 class About extends Component {
     render() {
       return (
-        <!--create the image for the beginning of the page-->
+
         <div>
         <div className="bg-img">
+
+        <p className='text'> About us </p>
+
         </div>
 
+        <div id = "div1">
         <div className='body-wrapper'>
+        <br/>
         <div className='body-container'>
             <img className='money' src={money} alt='Here is Money'/>
-            <p className='statement'>About EasySave</p>
+            <br/> <br/>
+            <p className='statement'> Save Easily </p>
         </div>
 
-        <!-- This is what our user will see to understand what our app is all about. -->
-        <!--This part will talk about how our financial app works -->
+        {/*This is what our user will see to understand what our app is all about.*/}
+        {/*This part will talk about how our financial app works*/}
        <CardDeck>
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >Using our app</Card.Header>
@@ -33,11 +40,11 @@ class About extends Component {
        </Card.Body>
        </Card>
 
-       <!--This part will help explain to the users why we created this app -->
+       {/*This part will help explain to the users why we created this app*/}
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >About EasySave</Card.Header>
        <Card.Body>
-       <Card.Title>Why is EasySave created?</Card.Title>
+       <Card.Title>How was EasySave created?</Card.Title>
        <Card.Text>
        Today, about more than 50% of the people don't have a budget.  We spend our money on unnecessary things.
        The problem with this is that it can really add up over the course of decades, which can really impede the retirement of many people.
@@ -48,7 +55,7 @@ class About extends Component {
        </Card.Body>
        </Card>
 
-       <!-- This part will show users the features that we implemented in our financial app -->
+       {/*This part will show users the features that we implemented in our financial app*/}
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
        <Card.Header >Features</Card.Header>
        <Card.Body>
@@ -64,6 +71,10 @@ class About extends Component {
        </Card>
 
        </CardDeck>
+
+       <br/> <br/>
+
+       </div>
 
        </div>
        </div>

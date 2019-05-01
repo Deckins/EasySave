@@ -10,7 +10,6 @@
 .body-container{
     margin: 30px;
     text-align:center;
-
 }
 
 .body-wrapper{
@@ -19,8 +18,13 @@
 
 .statement{
     font-family: Soleil_Light,Helvetica,Arial,sans-serif;
-    font-size: 48px;
+    font-size: 950px;
     line-height: 64px;
+    color: Black;
+    font-weight: bold;
+    background-color: white;
+    border-left:60px solid #66ff66;
+    border-right:60px solid #66ff66;
 }
 
 .state{
@@ -47,4 +51,17 @@
 .cards{
     margin: 0px 20px;
     display:inline-block;
+}
+
+#div1 {
+	background-image: url("../images/cash.jpg");
+}
+
+.text{
+  font-weight: bold;
+  font-family: Arial, Helvetica,sans-serif;
+  position: absolute;
+  font-size: 750px;
+  border-left:60px solid beige;
+  border-right:60px solid beige;
 }
