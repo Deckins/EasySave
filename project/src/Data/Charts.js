@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Bar, Doughnut} from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2'
 import './Chart.css';
+import FormInput from '../FormInput/FormInput';
 
 
 class Charts extends Component {
@@ -37,20 +38,46 @@ class Charts extends Component {
                         "#6384FF"
                     ]
                 }]
-        }
+        },
+        toggle:false,
+        changed:false
+    }
+    inputHandler = (inputData,id) => {
+        console.log(inputData,id,'This is the input')
+        let copy = this.state.pie
+        copy.datasets[0].data[id] = parseInt(inputData,10)
+        this.setState({pie:copy, changed:true})
+        console.log(this.state.pie.datasets)
+
+    }
+    
+    toggleHandler = () => {
+        let toggle = !this.state.toggle
+        this.setState({toggle:toggle})
     }
 
     render() {
+        let content = 'Budget Dashboard'
+        if(this.state.changed === true){
+            content = <h1>Content has changed</h1>
+        }
+        let edit = null
+        if(this.state.toggle === true){
+            edit = <FormInput inputCallBack={this.inputHandler} />
+        }
+          
         defaults.global.defaultFontColor = 'white'
         return (
             <div className="dashboard-wrapper">
-                <header className="top-header">Spending Dashboard</header>
+                <header className="top-header">{content}</header>
+                <button className="edit" onClick={this.toggleHandler}>Edit</button>
+                {edit}
                 <div className='chart-container'>
                     <ul>
                         <li>
                             <Doughnut  width={400} height= {400}
                             options={{ maintainAspectRatio: false  ,responsive:false }}
-                            data={this.state.pie}
+                            data={this.state.pie} redraw
                             />
                         </li>
                         <li>
@@ -59,6 +86,7 @@ class Charts extends Component {
                             data={this.state.bar}
                             />
                         </li>
+                       
                     </ul>
 
                 </div>

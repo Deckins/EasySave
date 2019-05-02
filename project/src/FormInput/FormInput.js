@@ -8,37 +8,49 @@ import axios from '../axios-orders';
 class FormInput extends Component {
     state = {
         orderForm: {
-            name: {
+            month: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Your Name'
+                    placeholder: 'Month'
                 },
                 value: ''
             },
-            street: {
+            food: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Street'
+                    placeholder: 'Food'
                 },
-                value: ''
+                value: '',
+                id:0
             },
-            zipCode: {
+            utilities: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'ZIP Code'
+                    placeholder: 'Utilities'
                 },
-                value: ''
+                value: '',
+                id:1
             },
-            email: {
+            transporation: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'email',
-                    placeholder: 'Your E-Mail'
+                    type: 'text',
+                    placeholder: 'Transporation'
                 },
-                value: ''
+                value: '',
+                id:2
+            },
+            entertainment: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Entertainment'
+                },
+                value: '',
+                id:3
             }},
 
             loading: false,
@@ -53,11 +65,11 @@ class FormInput extends Component {
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
-    const order = formData
+        const order = formData
 
-    axios.post( '/users.json', order )
+    axios.post( '/charts.json', order )
         .then( response => {
-        this.setState( { loading: false } );
+            this.setState( { loading: false } );
         })
         .catch( error => {this.setState( { loading: false } );
         });
@@ -68,6 +80,8 @@ class FormInput extends Component {
     }
 
 inputChangedHandler = (event, inputIdentifier) => {
+    let id = this.state.orderForm[inputIdentifier].id
+    this.props.inputCallBack(event.target.value,id)
     const updatedOrderForm = {
         ...this.state.orderForm
     };
@@ -81,12 +95,13 @@ inputChangedHandler = (event, inputIdentifier) => {
 
     submitCanceler = () =>{
         this.setState({submited:false})
-        this.props.history.push( '/' );
+        // this.props.history.push( '/' );
 
 }
 
 render () {
     const formElementsArray = [];
+    console.log(this.state.orderForm)
     for (let key in this.state.orderForm) {
         formElementsArray.push({
             id: key,
@@ -97,13 +112,18 @@ render () {
         <form onSubmit={this.orderHandler}>
         {console.log(formElementsArray)}
         {formElementsArray.map(formElement => (
+    
             <Form
             key={formElement.id}
             elementType={formElement.config.elementType}
             elementConfig={formElement.config.elementConfig}
             value={formElement.config.value}
-            changed={(event) => this.inputChangedHandler(event, formElement.id)} />
-        ))
+            changed={(event) => this.inputChangedHandler(event, formElement.id)} 
+            />
+
+        )
+            
+            )
         }
             <input type="submit" value="Submit"/>
         </form>

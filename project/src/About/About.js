@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import money from '../images/money.jpg';
 import './About.css';
 import {Card, CardDeck} from 'react-bootstrap';
-{/*This will import the react features to customize the financial app*/}
 
 class About extends Component {
     render() {

@@ -6,6 +6,8 @@
     border: 1px solid #eee;
     padding: 10px;
     box-sizing: border-box;
+    background-image: linear-gradient(to right ,rgb(3, 96, 184),rgb(92, 169, 241));
+
 
 }
 

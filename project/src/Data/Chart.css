@@ -1,6 +1,11 @@
-html,body{
+/* html,body{
     padding:0;
     margin:0;
+
+} */
+.edit{
+    /* float:right; */
+    margin-left: 20px;
 }
 .top-header{
     /* margin: 15px 15px; */
@@ -12,11 +17,13 @@ html,body{
 
 }
 .dashboard-wrapper{
-    background-color:rgb(20, 63, 104);
-    background-image: linear-gradient(to bottom right ,rgb(7, 58, 105),rgb(65, 126, 184));
+    background-image: linear-gradient(to right ,rgb(7, 58, 105),rgb(65, 126, 184));
     background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height:100%;
+    width:100%;
+    
 }
 
 ul{
@@ -35,16 +42,6 @@ li{
     background-color:rgb(13, 64, 105);
     margin:10px 10px;
     border-top: solid white 14px;
-
-}
-
-.chart-container{
-    /* display: flex; */
-    /* margin:15px 15px;
-    padding:10px 10px; */
-    /* width:500px;
-    height:500px; */
-    /* overflow:hidden; */
 
 }
 
