@@ -9,12 +9,16 @@ import {Jumbotron} from 'react-bootstrap';
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 class SignIn extends Component{
     render() {
+
         const {
             user,
             signOut,
             signInWithGoogle,
           } = this.props;
-
+          
+        if(user){
+          // this.props.nameHandler(user.displayName)
+        }
           return (
             <div>
             <div className="bg-img">

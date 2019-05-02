@@ -1,5 +1,7 @@
 .ContactData {
-    margin: 100px auto;
+    margin: 20px 20px;
+    position:relative;
+    top: -50px;
     width: 80%;
     text-align: center;
     box-shadow: 0 2px 3px #ccc;
@@ -7,7 +9,7 @@
     padding: 10px;
     box-sizing: border-box;
     background-image: linear-gradient(to right ,rgb(3, 96, 184),rgb(92, 169, 241));
-
+    /* float:right; */
 
 }
 

@@ -7,7 +7,7 @@ class Home extends Component {
         return (
             <div>
                 <div className="bg-img">
-                    <p className='text'>Take control now!</p>
+                    {/* <p className='text'>Take control now!</p> */}
                 </div>
 
                 <div>

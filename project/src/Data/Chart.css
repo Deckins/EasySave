@@ -19,12 +19,13 @@
 .dashboard-wrapper{
     background-image: linear-gradient(to right ,rgb(7, 58, 105),rgb(65, 126, 184));
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
     background-size: cover;
-    height:100%;
-    width:100%;
+  
+    padding: 25px 0px;
     
 }
+
 
 ul{
   list-style-type: none;
@@ -33,7 +34,8 @@ ul{
   /* overflow: hidden; */
 }
 
-li{
+
+.list{
     display: inline-block;
     color: white;
     text-align: center;

@@ -47,9 +47,10 @@
     font-family: Soleil_Light,Helvetica,Arial,sans-serif;
     font-size: 48px;
     line-height: 64px;
-    background-color: white;
-    border-left:60px solid #66ff66;
-    border-right:60px solid #66ff66;
+    background-color: rgb(66, 64, 64);
+    border-left:60px solid #0a960a;
+    border-right:60px solid #118d11;
+    color:rgb(255, 255, 255);
 }
 
 .cards{

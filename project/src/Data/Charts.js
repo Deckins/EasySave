@@ -4,7 +4,6 @@ import { defaults } from 'react-chartjs-2'
 import './Chart.css';
 import FormInput from '../FormInput/FormInput';
 
-
 class Charts extends Component {
     state={
         bar: {
@@ -30,7 +29,7 @@ class Charts extends Component {
             fontColor:'white',
             datasets: [
                 {
-                    data: [133.3, 86.2,  51.2, 50.2],
+                    data: [10, 10,  10, 10],
                     backgroundColor: [
                         "#FF6384",
                         "#63FF84",
@@ -50,6 +49,9 @@ class Charts extends Component {
         console.log(this.state.pie.datasets)
 
     }
+    userHandler = (name) => {
+
+    }
     
     toggleHandler = () => {
         let toggle = !this.state.toggle
@@ -57,37 +59,42 @@ class Charts extends Component {
     }
 
     render() {
-        let content = 'Budget Dashboard'
-        if(this.state.changed === true){
-            content = <h1>Content has changed</h1>
-        }
+        
         let edit = null
         if(this.state.toggle === true){
-            edit = <FormInput inputCallBack={this.inputHandler} />
+           edit = <div className="input">
+                    <FormInput inputCallBack={this.inputHandler} />
+                </div>
+            
         }
           
         defaults.global.defaultFontColor = 'white'
         return (
             <div className="dashboard-wrapper">
-                <header className="top-header">{content}</header>
+                <header className="top-header"><h1>Spending Dashboard</h1></header>
                 <button className="edit" onClick={this.toggleHandler}>Edit</button>
-                {edit}
+                {/* {edit} */}
                 <div className='chart-container'>
                     <ul>
-                        <li>
-                            <Doughnut  width={400} height= {400}
+                        <li className='list'>
+                            <Doughnut  width={340} height= {400}
                             options={{ maintainAspectRatio: false  ,responsive:false }}
                             data={this.state.pie} redraw
                             />
                         </li>
-                        <li>
-                            <Bar  width={400} height= {400}
+                        <li className='list'>
+                            <Bar  width={340} height= {400}
                             options={{ maintainAspectRatio: false ,responsive:false }}
                             data={this.state.bar}
                             />
                         </li>
-                       
+                        <li style={{display: 'inline-block'}}>
+                            {edit}
+                        </li>
+                        
                     </ul>
+                 
+                   
 
                 </div>
             </div>
