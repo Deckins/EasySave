@@ -1,8 +1,8 @@
-.bg-img {
+.signin-img {
     /* The image used */
-    background-image: url("../images/header.jpg");
+    background-image: url("../images/moneypig.jpg");
 
-    min-height: 500px;
+    min-height: 650px;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -14,8 +14,10 @@
     opacity:1;
 }
 
-#sign {
+.sign {
 	background-color: beige;
+  padding-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .body-wrapper{
@@ -23,9 +25,9 @@
 }
 
 .body-container{
-    margin: 30px;
     text-align:center;
-
+    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .text{
@@ -44,11 +46,46 @@
 
 .welcome {
       font-family: Soleil_Light,Helvetica,Arial,sans-serif;
-      font-size: 50px;
+      font-size: 45px;
       line-height: 64px;
       color: Black;
       font-weight: bold;
-      background-color: white;
-      border-left:60px solid #66ff66;
-      border-right:60px solid #66ff66;
+      border: 5px solid Black;
+      background-color:#25E189;
+      padding-top: 20px;
+      padding-bottom: 20px;
+}
+
+#container{
+  padding: 16px;
+  background-color: white;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+.Click-to-log{
+  padding-bottom: 30px;
+  text-align:absolute;
+  font-size: 20px;
+}
+
+.signin-button
+{
+  text-align:absolute;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.log{
+  border: 5px solid grey;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+hr {
+  border: 1px solid black;
+  margin-bottom: 25px;
 }

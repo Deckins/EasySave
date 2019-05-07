@@ -8,18 +8,18 @@ class About extends Component {
       return (
 
         <div>
-        <div className="bg-img">
+        <div className="aboutimg">
 
         <p className='text'> About us </p>
 
         </div>
 
-        <div id = "div1">
+        <div>
         <div className='body-wrapper'>
         <br/>
         <div className='body-container'>
             <img className='money' src={money} alt='Here is Money'/>
-            <br/> <br/>
+            <br/> <br/> <br/>
             <p className='statement'> Save Easily </p>
         </div>
 
@@ -41,7 +41,7 @@ class About extends Component {
 
        {/*This part will help explain to the users why we created this app*/}
        <Card border ='success' bg="light" style={{ width: '20rem' }}>
-       <Card.Header >About EasySave</Card.Header>
+       <Card.Header >Emergence of EasySave</Card.Header>
        <Card.Body>
        <Card.Title>How was EasySave created?</Card.Title>
        <Card.Text>
@@ -72,9 +72,7 @@ class About extends Component {
        </CardDeck>
 
        <br/> <br/>
-
        </div>
-
        </div>
        </div>
    )

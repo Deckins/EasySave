@@ -4,7 +4,6 @@ import 'firebase/auth';
 import firebaseConfig from '../firebaseConfig';
 import React, {Component} from 'react';
 import './SignIn.css';
-import {Jumbotron} from 'react-bootstrap';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 class SignIn extends Component{
@@ -15,17 +14,17 @@ class SignIn extends Component{
             signOut,
             signInWithGoogle,
           } = this.props;
-          
+
         if(user){
           // this.props.nameHandler(user.displayName)
         }
           return (
             <div>
-            <div className="bg-img">
+            <div className="signin-img">
                 <p className='text'>Easy Way, Easy Save</p>
             </div>
 
-           <div id = "sign">
+           <div className= "sign">
            <br/>
            <div className='body-container'>
                <br/> <br/>
@@ -34,23 +33,29 @@ class SignIn extends Component{
 
            </div>
 
-           <Jumbotron>
-            <div>
-                  {
+           <div id= 'container'>
+           <h1>Register for EasySave</h1>
+           <p>Follow the instruction below</p>
+           <hr/>
+
+           <p> Welcome to EasySave </p>
+           <p> To make things easy for you, you can track your finances by using your Google Account </p>
+           <p> Once you sign in with your Google Account, you will be able to view your finances in our database </p>
+           <hr/>
+            {
               user
                 ? <h2>Hello, {user.displayName}</h2>
-                : <h2> <center> Welcome to EasySave, Click the button to sign in </center> </h2>
+                : <h2> <p className= 'Click-to-log'> Click the button below to sign in with your Google Account to track your finances</p> </h2>
             }
 
-            <br/>
 
             {
               user
                 ? <button onClick={signOut}>Sign out</button>
-                : <center> <bold> <button onClick={signInWithGoogle}> Sign in with Google </button> </bold> </center>
+                : <p className= 'signin-button'> <button onClick={signInWithGoogle}> Sign In Now </button> </p>
             }
+
             </div>
-            </Jumbotron>;
 
             </div>
             </div>
