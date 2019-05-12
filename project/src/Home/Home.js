@@ -26,7 +26,7 @@ class Home extends Component {
                                     <Card.Text>
                                         Its never too early to think about retirement. Are you on track to a
                                         secure future? We can help you find out!
-        </Card.Text>
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
 
@@ -37,7 +37,7 @@ class Home extends Component {
                                     <Card.Text>
                                         Do you know how much you're spending on each month? Start calculating now and take control
                                         of your financial future.
-        </Card.Text>
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
 
@@ -49,7 +49,7 @@ class Home extends Component {
                                     <Card.Text>
                                         You'd be surprised how much you can save by setting aside money each week. Start setting goals now
                                         and finally get that new dinner table or flatscreen tv you've always wanted!
-        </Card.Text>
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
 

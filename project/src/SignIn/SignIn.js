@@ -6,9 +6,12 @@ import React, {Component} from 'react';
 import './SignIn.css';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+{/*This is the user Sign in page for people trying to sign in to EasySave*/}
 class SignIn extends Component{
     render() {
 
+        {/*Create a Sign out for the Google Account.*/}
         const {
             user,
             signOut,
@@ -33,6 +36,8 @@ class SignIn extends Component{
 
            </div>
 
+           {/*Created a Instruction manuel for the users to follow using EasySave for the first time.
+             Instructions are written below in order to be able to use EasySave*/}
            <div id= 'container'>
            <h1>Register for EasySave</h1>
            <p className = 'Register'>Follow the instruction below</p>
@@ -48,7 +53,8 @@ class SignIn extends Component{
                 : <h2> <p className= 'Click-to-log'> Click the button below to sign in with your Google Account to track your finances</p> </h2>
             }
 
-
+            {/*Sign in button created so when the user click the button, their google account
+              will be used to go on EasySave and view their finance database.*/}
             {
               user
                 ? <button onClick={signOut}>Sign out</button>

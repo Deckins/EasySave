@@ -4,6 +4,8 @@ import cash from '../images/cash.jpg';
 import finance_features from '../images/finance_features.jpg';
 import './About.css';
 
+{/*This About page for people to view about EasySave.
+  It explains the objective of what EasySave is and why users should use our product*/}
 class About extends Component {
     render() {
       return (
@@ -17,7 +19,7 @@ class About extends Component {
 
             <div className='firstcontainer'>
               <div className='info'>
-              {/*This explains about EasySave.*/}
+              {/*This section explains about EasySave.*/}
                 <h1 class= 'info-text'>About EasySave </h1>
               <div className='mission-info'>
                 <p className= 'aboutinfo'> Our favorite word is Easy and we like everything easy.
@@ -35,7 +37,8 @@ class About extends Component {
         </div>
 
         {/*This is what our user will see to understand what our app is all about.*/}
-        {/*This part will talk about how our financial app works*/}
+        {/*It will explain about how our financial app works.*/}
+       <section>
        <div className='features'>
        <div className= 'detail1'>
         <div className= 'detail1-container'>
@@ -59,6 +62,7 @@ class About extends Component {
        </div>
        </div>
 
+       {/*This part will help explain to the users why we created this app.*/}
        <div className='features2'>
        <div className= 'detail2'>
         <div className= 'detail2-container'>
@@ -85,6 +89,8 @@ class About extends Component {
        </div>
        </div>
 
+       {/*This part will show users the features that we implemented in our financial app.
+         This can also be used in our andriod app. */}
        <div className='features3'>
        <div className= 'detail3'>
         <div className= 'detail3-container'>
@@ -108,12 +114,11 @@ class About extends Component {
         </div>
        </div>
        </div>
+       </section>
 
 
       {/*This div below closes out the entire div*/}
        </div>
-
-
    )
 
     }

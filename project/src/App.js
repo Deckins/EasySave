@@ -7,6 +7,8 @@ import Home from './Home/Home';
 import Charts from './Data/Charts';
 import SignIn from './SignIn/SignIn';
 
+{/*This is our app for EasySave.  Navbar is implemented and Users will click the links
+  and be routed to the certain page based on the link clicked*/}
 class App extends Component {
   render() {
     return(

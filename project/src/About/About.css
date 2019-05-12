@@ -1,3 +1,4 @@
+{/*Adjust the images.*/}
 .cash, .finance_features{
     height:400px;
     width:600px;
@@ -10,6 +11,7 @@
     background-color: white;
 }
 
+{/*Adjust the images.*/}
 .money_bag{
   height:450px;
   width:750px;
@@ -23,7 +25,6 @@
 }
 
 .text-title{
-
     z-index: 100;
     position: absolute;
     font-size: 50px;
@@ -50,11 +51,6 @@
     margin-right: 75px;
 }
 
-.state{
-	font-family: times new roman;
-	font-size: 14px;
-}
-
 .aboutimg {
     /* The image used */
     background-image: url("../images/savemoney.jpg");
@@ -70,14 +66,6 @@
     position: relative;
     opacity:1;
 
-}
-
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: auto;
-  text-align:center;
 }
 
 .about{
@@ -138,7 +126,7 @@
   font-family: Arial;
 }
 
-.detail1-container, .ddetail2-container, .detail3-container{
+.detail1-container, .detail2-container, .detail3-container{
   margin-left: auto;
   margin-right: auto;
 }
