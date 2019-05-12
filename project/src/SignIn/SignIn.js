@@ -28,19 +28,19 @@ class SignIn extends Component{
            <br/>
            <div className='body-container'>
                <br/> <br/>
-               <p className='welcome'>Sign In</p>
+               <p className='welcome'>Sign In for EasySave</p>
 
 
            </div>
 
            <div id= 'container'>
            <h1>Register for EasySave</h1>
-           <p>Follow the instruction below</p>
+           <p className = 'Register'>Follow the instruction below</p>
            <hr/>
 
-           <p> Welcome to EasySave </p>
-           <p> To make things easy for you, you can track your finances by using your Google Account </p>
-           <p> Once you sign in with your Google Account, you will be able to view your finances in our database </p>
+           <p className = 'Register'> Welcome to EasySave! </p>
+           <p className = 'Register'> To make things easy for you, you can track your finances by using your Google Account. </p>
+           <p className = 'Register'> Once you sign in with your Google Account, you will be able to view your finances in our database. </p>
            <hr/>
             {
               user

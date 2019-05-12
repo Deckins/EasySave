@@ -16,8 +16,7 @@
 
 .sign {
 	background-color: beige;
-  padding-bottom: 200px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .body-wrapper{
@@ -54,13 +53,17 @@
       background-color:#25E189;
       padding-top: 20px;
       padding-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
 }
 
 #container{
-  padding: 16px;
+  padding: 25px;
   background-color: white;
   box-sizing: border-box;
   border: 2px solid black;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .Click-to-log{
@@ -88,4 +91,9 @@
 hr {
   border: 1px solid black;
   margin-bottom: 25px;
+}
+
+.Register{
+  text-align:absolute;
+  font-size: 20px;
 }
