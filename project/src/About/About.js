@@ -22,14 +22,14 @@ class About extends Component {
               {/*This section explains about EasySave.*/}
                 <h1 class= 'info-text'>About EasySave </h1>
               <div className='mission-info'>
-                <p className= 'aboutinfo'> Our favorite word is Easy and we like everything easy.
-                For the most part,Finances and Easy are two words that do not go well together
-                and we would like to make finances easy for you.
+                <p className= 'aboutinfo'> Many people's favorite word is Easy and we like everything easy.
+                For the most part, Finances and Easy are two words that do not go well together.
+                Our mission is to make Finances and Easy two words that go well together.
                 We do that by creating a website and app to make your finance tracking Simple and Easy.
                 Saving money is not easy and EasySave will help make it Easy.
-                It is what drives us to help make your finances as easy as it can be.
+                It is a huge cause and is what drives us to make finances easy for everyone.
                 </p>
-                <p className= 'inspire'> Inspired by three College Students trying to live a easy financial life </p>
+                <p className= 'inspire'> Inspired by three College Students trying to live easy financially </p>
                 </div>
               </div>
             </div>
@@ -37,7 +37,8 @@ class About extends Component {
         </div>
 
         {/*This is what our user will see to understand what our app is all about.*/}
-        {/*It will explain about how our financial app works.*/}
+
+        {/*The first part will explain about how our financial app works.*/}
        <section>
        <div className='features'>
        <div className= 'detail1'>
@@ -62,7 +63,7 @@ class About extends Component {
        </div>
        </div>
 
-       {/*This part will help explain to the users why we created this app.*/}
+       {/*The second part will help explain to the users why we created this app.*/}
        <div className='features2'>
        <div className= 'detail2'>
         <div className= 'detail2-container'>
@@ -89,7 +90,7 @@ class About extends Component {
        </div>
        </div>
 
-       {/*This part will show users the features that we implemented in our financial app.
+       {/*The third part will show users the features that we implemented in our financial app.
          This can also be used in our andriod app. */}
        <div className='features3'>
        <div className= 'detail3'>
@@ -117,7 +118,6 @@ class About extends Component {
        </section>
 
 
-      {/*This div below closes out the entire div*/}
        </div>
    )
 
