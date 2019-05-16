@@ -10,18 +10,34 @@ request('https://www.expatistan.com/cost-of-living/new-york-city', (error,respon
         const foodData = $('.prices');
         // const tableRows = foodData.find('tr')
         
+        //Stores all the price data from web scraping into the food object
         let foodObj = []
         $('tr').each((i,element) => {
             const name = $(element).find('.item-name a').text();
             const price = $(element).find('.price.city-1').text().replace(/\s\s+/g, '');  
             foodObj.push({name,price})
         })
-        foodObj.map(obj =>{
-            if(obj.name && obj.price)
-            console.log('Expense: ' + obj.name + '\nPrice: ' + obj.price + '\n')
+        foodObj.splice(0,1)
+        let foodTypeObj = []
+        let start = 0
+        //Splits the all the price data into different types of the array
+        foodObj.map((obj,i) =>{
+            if(obj.name ==='' && obj.price ===''){
+                foodTypeObj.push(foodObj.slice(start,i))
+                start = i+1
+                console.log(start)                
+            }
+            // console.log(foodTypeObj)
+            // console.log('Expense: ' + obj.name + '\nPrice: ' + obj.price + '\n')
         })   
+        // console.log(foodObj)
+        foodTypeObj.splice(2,1)
+        foodTypeObj.map(foodType => {
+            // console.log('\n',foodType)
+        })
+        console.log(foodTypeObj)
         app.get('/', function (req, res) {
-            res.send(foodObj)
+            res.send(foodTypeObj)
           })
     }
     else

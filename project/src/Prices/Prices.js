@@ -16,8 +16,11 @@ class Prices extends Component {
         return (
             <div>
                 {this.state.pricesObj.map(obj =>{
-                    if(obj.name && obj.price)
-                    return <p>{obj.name} and {obj.price}</p>
+                    // if(obj.name && obj.price)
+                    return obj.map(o =>
+                         <p>{o.name} and {o.price}</p>
+
+                    )
                 })}
             </div>
         );
