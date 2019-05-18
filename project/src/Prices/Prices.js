@@ -17,8 +17,9 @@ class Prices extends Component {
         loading: true
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/')
+        axios.get('https://ezsave-5c146.firebaseio.com/PricesData/-Lf8nUUS1Y9MoQiKaaBy/Prices.json')
             .then(response => {
+                // console.log(response.data)
                 this.setState({ pricesObj: response.data })
 
             })

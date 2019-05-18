@@ -1,6 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 var express = require('express');
+var unirest = require('unirest');
 var app = express();
 const port = 5000;
  
@@ -25,20 +26,27 @@ request('https://www.expatistan.com/cost-of-living/new-york-city', (error,respon
             if(obj.name ==='' && obj.price ===''){
                 foodTypeObj.push(foodObj.slice(start,i))
                 start = i+1
-                console.log(start)                
             }
             // console.log(foodTypeObj)
             // console.log('Expense: ' + obj.name + '\nPrice: ' + obj.price + '\n')
         })   
         // console.log(foodObj)
         foodTypeObj.splice(2,1)
-        foodTypeObj.map(foodType => {
-            // console.log('\n',foodType)
-        })
-        console.log(foodTypeObj)
-        app.get('/', function (req, res) {
+       
+        // console.log(foodTypeObj)
+        app.get('/prices', function (req, res) {
             res.send(foodTypeObj)
+            
+
           })
+        jsonData = {"Prices": foodTypeObj}
+        unirest.post('https://ezsave-5c146.firebaseio.com/PricesData.json')
+          .header('Accept', 'application/json')
+          .send(JSON.stringify(jsonData))
+          .end(function (response) {
+            console.log(response.body);
+            // console.log(foodTypeObj)
+          });
     }
     else
         console.log(error)
