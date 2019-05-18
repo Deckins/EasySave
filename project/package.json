@@ -6,14 +6,20 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
+    "cheerio": "^1.0.0-rc.3",
     "firebase": "^5.9.4",
+    "materialize-css": "^1.0.0-rc.2",
+    "puppeteer": "^1.16.0",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.5",
-    "react-with-firebase-auth": "^1.0.2"
+    "react-tabs": "^3.0.0",
+    "react-with-firebase-auth": "^1.0.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
