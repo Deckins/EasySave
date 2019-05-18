@@ -4,7 +4,6 @@ import piggybank from '../images/piggy.jpg';
 import ben100 from '../images/ben100.jpg';
 import your_expenses from '../images/your_expenses.jpg';
 import './Home.css';
-import { Card, CardDeck } from 'react-bootstrap';
 
 {/*This is the home page of our website.
   It is the small details that will help attract users to our app.
