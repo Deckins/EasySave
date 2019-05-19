@@ -12,7 +12,7 @@ class About extends Component {
 
         <div>
         <div className="aboutimg">
-        <p className= 'text-title'>  Emergence of EasySave </p>
+        <p className= 'text-title'> Start Saving Now! </p>
         </div>
 
         <div className= 'main'>
@@ -25,11 +25,9 @@ class About extends Component {
                 <p className= 'aboutinfo'> Many people's favorite word is Easy and we like everything easy.
                 For the most part, Finances and Easy are two words that do not go well together.
                 Our mission is to make Finances and Easy two words that go well together.
-                We do that by creating a website and app to make your finance tracking Simple and Easy.
-                Saving money is not easy and EasySave will help make it Easy.
                 It is a huge cause and is what drives us to make finances easy for everyone.
                 </p>
-                <p className= 'inspire'> Inspired by three College Students trying to live easy financially </p>
+                <p className= 'inspire'><strong>Inspired by three College Students trying to live easy financially</strong>  </p>
                 </div>
               </div>
             </div>
@@ -52,8 +50,7 @@ class About extends Component {
 
               <p className= 'detail1-info'>
               We total up and sort how much you spend every time you make a purchase.
-              When you are done with your purchases we will store your data into a database in our app.
-              We also have features in our app that will help you find out how much you spend quickly and efficiently.
+              When you are done with your purchases we will store your data into our database.
               By using EasySave, we can help make your finances easy to follow and maintain.
               </p>
 
@@ -71,17 +68,16 @@ class About extends Component {
               <img className='money_bag' src={money_bag} alt='Here is a money_bag'/>
               <div className= 'detail2-textbox'>
               <p className= 'detail2-title'>
-              How was EasySave created?
+              Why Create EasySave?
               </p>
 
               <p className= 'detail2-info'>
               Today, about more than 50% of the people don't have a budget.  We spend our money on unnecessary things.
               The problem with this is that it can really add up over the course of decades,
-              which can really impede the retirement of many people.
+              which can really impede the retirement of some people.
               It is also reported that over 75% of full time workers in the US are living paycheck to paycheck.
               Many of these people have too many expenses.
               The worst case scenario is that people can go bankrupt because they don't know how to handle their money.
-              With this problem arising, this is when our app will help dissolve your financial problems and mae your financial life easy.
               </p>
 
             </div>
@@ -105,9 +101,9 @@ class About extends Component {
               <p className= 'detail3-info'>
               We implement a feature where you can take a photo of your receipt for those of you that are lazy to input your values in our app.
               We then use our image processing software that will populate the categories that you have spent your money on.
-              After using your data we can then calculate average spending based on location to determine you are overspending or not.
-              We  implement a savings feature where you can set a certain item you want to save for.
-              Our app will tell you how much you need to save each week and for how long.
+              After using your data we can then calculate average spending based on location to determine if you are overspending or not.
+              We also utilize Web Scraping to get the most up to date prices for the most common expenses. 
+              You can sort by prices to choose the price point that best meets your budget!
               </p>
 
             </div>
