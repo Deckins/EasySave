@@ -1,0 +1,58 @@
+{/*Style the PriceDisplay page*/}
+.displaycontainer{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  display: inline-block;
+  border-style: 20px solid black;
+}
+
+{/*Give an effect when user view how much they spend their money*/}
+.displaycard:hover{
+    box-shadow: 0 10px 20px 0 black;
+ }
+
+.displaycard{
+  width: 275px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 black;
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #00cc99;
+  transition: 0.4s;
+  text-align: center;
+  border: 5px solid black;
+  font-family: courier;
+}
+
+.name-props {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: Helvetica;
+   font-size: 18px;
+   background-color: #66ffe0;
+}
+
+.price-props{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #FAFAD2;
+  font-size: 18px;
+  font-family: Arial;
+}

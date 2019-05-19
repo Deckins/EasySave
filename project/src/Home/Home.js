@@ -20,7 +20,7 @@ class Home extends Component {
                 <div className='body-wrapper'>
                 <div className='body-container'>
                 <img className='piggy' src={piggy} alt='Here is a piggy'/>
-                <p className='statement'> Save Easily </p>
+                <p className='statement'> Save Easily with EasySave </p>
                 </div>
 
                 <section className= 'section'>

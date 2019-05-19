@@ -37,7 +37,8 @@ class SignIn extends Component{
            </div>
 
            {/*Created a Instruction manuel for the users to follow using EasySave for the first time.
-             Instructions are written below in order to be able to use EasySave*/}
+             Instructions are written below in order to be able to use EasySave.
+             Users will click the button to sign in with their google account in order to go to the Firebase.*/}
            <div id= 'container'>
            <h1>Register for EasySave</h1>
            <p className = 'Register'>Follow the instruction below</p>

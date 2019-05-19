@@ -22,10 +22,16 @@ class About extends Component {
               {/*This section explains about EasySave.*/}
                 <h1 class= 'info-text'>About EasySave </h1>
               <div className='mission-info'>
-                <p className= 'aboutinfo'> Many people's favorite word is Easy and we like everything easy.
+                <p className= 'aboutinfo'> Our favorite word is Easy and we like everything easy.
                 For the most part, Finances and Easy are two words that do not go well together.
                 Our mission is to make Finances and Easy two words that go well together.
+<<<<<<< HEAD
                 It is a huge cause and is what drives us to make finances easy for everyone.
+=======
+                We do that by creating a website and app to make your finance is Simple and Easy.
+                Saving money is not easy and EasySave will help make it Easy.
+                It is a huge problem in the lives of people and it is what drives us to make finances easy for everyone.
+>>>>>>> c53b89f1f7da7bfe6a8f6feec5056dc8e907edcb
                 </p>
                 <p className= 'inspire'><strong>Inspired by three College Students trying to live easy financially</strong>  </p>
                 </div>
