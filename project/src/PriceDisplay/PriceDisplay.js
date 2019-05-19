@@ -7,7 +7,12 @@ class PriceDisplay extends Component {
         return (
             <div className= 'displaycontainer'>
               <div class='displaycard'>
-                <p className= 'props'>{this.props.name} {this.props.price}</p>
+                <div className= 'name-props'>
+                {this.props.name}
+                </div>
+                <div className= 'price-props'>
+                {this.props.price}
+                </div>
               </div>
             </div>
         );

@@ -1,9 +1,10 @@
+{/*Style the Home Page*/}
+
 {/*Style the pictures*/}
 .piggy{
     border-radius: 100%;
     height:250px;
     width:250px;
-    /*margin: 0px auto;*/
     margin-bottom: 100px;
 }
 
