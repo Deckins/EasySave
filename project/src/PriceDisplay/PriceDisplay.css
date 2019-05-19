@@ -1,35 +1,48 @@
 {/*Style the page*/}
 .displaycontainer{
-  background-color: #00D084;
   margin-top: 25px;
   margin-bottom: 25px;
   margin-right: 20px;
   margin-left: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   padding-right: 25px;
   padding-left: 25px;
   display: inline-block;
+  border-style: 20px solid black;
 }
 
 {/*Give an effect when user view how much they spend their money*/}
-.displaycontainer:hover{
-  box-shadow: 0 10px 16px 0 black;
-}
+.displaycard:hover{
+    box-shadow: 0 10px 20px 0 black;
+ }
 
 .props {
    margin-left: 30px;
    margin-right: 30px;
-   margin-top: 20px;
-   margin-bottom: 20px;
+   margin-top: 25px;
+   margin-bottom: 25px;
    padding-bottom: 25px;
    padding-top: 25px;
    padding-right: 20px;
    padding-left: 20px;
    font-family: Arial;
    font-size: 16px;
-   border-style: solid;
-   border-color: 10px black;
-   border-left: 10px solid beige;
-   background-color: #73EB75;
+   background: #66ffe0;
+}
+
+.displaycard{
+  width: 275px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 black;
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #00cc99;
+  transition: 0.4s;
+  text-align: center;
+  border: 5px solid black;
+  font-family: courier;
 }

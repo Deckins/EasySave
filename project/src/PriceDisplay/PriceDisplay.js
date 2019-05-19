@@ -6,7 +6,9 @@ class PriceDisplay extends Component {
     render() {
         return (
             <div className= 'displaycontainer'>
+              <div class='displaycard'>
                 <p className= 'props'>{this.props.name} {this.props.price}</p>
+              </div>
             </div>
         );
     }
