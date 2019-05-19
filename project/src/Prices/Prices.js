@@ -15,17 +15,40 @@ class Prices extends Component {
             [{name:'bob',price:'16'}],
             [{name:'bob',price:'16'}]
         ],
-        loading: true
+        pricesOrg:[],
+        loading: true,
+        priceSort: 0
     }
     componentDidMount() {
         axios.get('https://ezsave-5c146.firebaseio.com/PricesData/-Lf8nUUS1Y9MoQiKaaBy/Prices.json')
             .then(response => {
-                // console.log(response.data)
+                //The original array is there to keep the original state of the prices array 
+                //have to use .slice(0) to make a copy not reference
                 this.setState({ pricesObj: response.data })
-
+                const copyArray = this.state.pricesObj.slice(0)
+                this.setState({ pricesOrg: copyArray })
             })
             .catch(error => console.log(error))
             this.setState({ loading: false })
+    }
+    handleChange = (event) => {
+        this.setState({priceSort:event.target.value}); 
+        console.log('this is the intial value after input', this.state.priceSort)       
+        this.setState({pricesObj:this.state.pricesOrg})
+        console.log('this is trying to set the org prices:', this.state.pricesObj, 'to' , this.state.pricesOrg)
+        let sortedPricesObj = this.state.pricesOrg[0].filter(obj => {
+                //This is to remove the intial $ at the beginning of the prices
+                let numb = obj.price.substring(1,obj.price.length)
+                // console.log(' prices:', numb,'price entered: ', this.state.priceSort)
+                return parseInt(numb,10) <= event.target.value
+           
+        })  
+
+        console.log(sortedPricesObj)
+        const copyArr= this.state.pricesObj
+        copyArr[0] = sortedPricesObj
+        this.setState({pricesObj:copyArr});
+       
     }
 
     render() {
@@ -39,16 +62,29 @@ class Prices extends Component {
                 <div>
                       {this.state.pricesObj.map(obj => (
                            <TabPanel>
+<<<<<<< HEAD
                                 {obj.map(o =>
                                     <PriceDisplay price={o.price} name={o.name}/>
                                 )}
                            </TabPanel>
+=======
+                                {obj.map(o => <PriceDisplay price={o.price} name={o.name}/> )}
+                           </TabPanel> 
+>>>>>>> 70dd42145e15434148cac4aa81d9ff488605f6ed
                       ))}
                 </div>
             )
         }
         return (
+<<<<<<< HEAD
             <div className = "tabs">
+=======
+            <div>
+                <label> 
+                    <input type="text"   onChange={this.handleChange} />
+        
+                </label>
+>>>>>>> 70dd42145e15434148cac4aa81d9ff488605f6ed
                 <Tabs>
                     <TabList>
                         <Tab>Food</Tab>
@@ -59,7 +95,6 @@ class Prices extends Component {
                     </TabList>
                     {output}
                 </Tabs>
-
             </div>
         );
     }
