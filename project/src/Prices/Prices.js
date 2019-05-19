@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import PriceDisplay from '../PriceDisplay/PriceDisplay';
 import './Prices.css';
 
+{/*Thr Price page, will display the price and how much you spend on certain items*/}
 class Prices extends Component {
     state = {
         pricesObj: [
@@ -28,7 +29,7 @@ class Prices extends Component {
     }
 
     render() {
-        
+
         let output = null
         if(this.state.loading){
            output = <div class="lds-circle"><div></div></div>
@@ -38,16 +39,16 @@ class Prices extends Component {
                 <div>
                       {this.state.pricesObj.map(obj => (
                            <TabPanel>
-                                {obj.map(o => 
+                                {obj.map(o =>
                                     <PriceDisplay price={o.price} name={o.name}/>
                                 )}
-                           </TabPanel> 
+                           </TabPanel>
                       ))}
                 </div>
             )
         }
         return (
-            <div>
+            <div className = "tabs">
                 <Tabs>
                     <TabList>
                         <Tab>Food</Tab>
