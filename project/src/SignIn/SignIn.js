@@ -7,11 +7,9 @@ import './SignIn.css';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-{/*This is the user Sign in page for people trying to sign in to EasySave*/}
 class SignIn extends Component{
     render() {
 
-        {/*Create a Sign out for the Google Account.*/}
         const {
             user,
             signOut,

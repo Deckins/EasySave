@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './PriceDisplay.css';
 
-{/*Will be imported to the Price Page and used to display the items spend*/}
 class PriceDisplay extends Component {
     render() {
         return (

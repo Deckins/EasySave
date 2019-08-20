@@ -4,11 +4,11 @@ import { defaults } from 'react-chartjs-2'
 import './Chart.css';
 import FormInput from '../FormInput/FormInput';
 
-{/*This is our data page.  In this data page, users will input their data and
-  a chart will be created to calculate their expenses*/}
-{/*Bar graph will be shown to users how much they spend in the months*/}
-{/*Pie Chart will be use to show the categories that the users spend their money on.
-  For example food, utilities, etc.*/}
+/*This is our data page.  In this data page, users will input their data and
+  a chart will be created to calculate their expenses*/
+/*Bar graph will be shown to users how much they spend in the months*/
+/*Pie Chart will be use to show the categories that the users spend their money on.
+  For example food, utilities, etc.*/
 class Charts extends Component {
     state={
         bar: {

@@ -3,8 +3,6 @@ import './Navbar.css';
 import {Link} from 'react-router-dom';
 import {Navbar,Nav} from 'react-bootstrap';
 
-{/*The Navbar will be used to control where the users can go.
-  We have 4 link we can go to which are Home, About, Your Data and Sign in pages.*/}
 class NavBar extends Component {
     render() {
         return (

@@ -5,9 +5,9 @@ import ben100 from '../images/ben100.jpg';
 import your_expenses from '../images/your_expenses.jpg';
 import './Home.css';
 
-{/*This is the home page of our website.
+/*This is the home page of our website.
   It is the small details that will help attract users to our app.
-  More details will be in the about page.*/}
+  More details will be in the about page.*/
 class Home extends Component {
     render() {
         return (

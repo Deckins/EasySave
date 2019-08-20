@@ -4,8 +4,8 @@ import cash from '../images/cash.jpg';
 import finance_features from '../images/finance_features.jpg';
 import './About.css';
 
-{/*This About page for people to view about EasySave.
-  It explains the objective of what EasySave is and why users should use our product*/}
+/*This About page for people to view about EasySave.
+  It explains the objective of what EasySave is and why users should use our product*/
 class About extends Component {
     render() {
       return (

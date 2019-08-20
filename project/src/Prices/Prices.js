@@ -69,8 +69,8 @@ class Prices extends Component {
         }
         return (
             <div>
-                <label> 
-                    <input type="text"   onChange={this.handleChange} />
+                <label style={{'font-size':'20px'}}> 
+                   <strong>Price Filter</strong>  <input type="text"   onChange={this.handleChange} />
         
                 </label>
                 <Tabs>
