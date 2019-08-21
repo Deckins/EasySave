@@ -5,7 +5,7 @@ class PriceDisplay extends Component {
     render() {
         return (
             <div className= 'displaycontainer'>
-              <div class='displaycard'>
+              <div className='displaycard'>
                 <div className= 'name-props'>
                 {this.props.name}
                 </div>

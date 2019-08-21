@@ -35,42 +35,55 @@ class Prices extends Component {
         console.log('this is the intial value after input', this.state.priceSort)       
         this.setState({pricesObj:this.state.pricesOrg})
         console.log('this is trying to set the org prices:', this.state.pricesObj, 'to' , this.state.pricesOrg)
-        let sortedPricesObj = this.state.pricesOrg[0].filter(obj => {
-                //This is to remove the intial $ at the beginning of the prices
-                let numb = obj.price.substring(1,obj.price.length)
-                // console.log(' prices:', numb,'price entered: ', this.state.priceSort)
-                return parseInt(numb,10) <= event.target.value
+        // let sortedPricesObj = this.state.pricesOrg[0].filter(obj => {
+        //         //This is to remove the intial $ at the beginning of the prices
+        //         let numb = obj.price.substring(1,obj.price.length)
+        //         // console.log(' prices:', numb,'price entered: ', this.state.priceSort)
+        //         // return parseFloat(numb,10) <= event.target.value
+        //         //This will remove all the "," so we can make a proper comparison
+        //         let parsedPrice = parseFloat(numb.replace(",", "")) 
+        //         return parsedPrice <= event.target.value
            
-        })  
+        // })  
+        let sortedPricesObj = this.state.pricesOrg.map(prices => {
+            return prices.filter(obj => {
+                let numb = obj.price.substring(1,obj.price.length)
+                let parsedPrice = parseFloat(numb.replace(",", "")) 
+                return parsedPrice <= event.target.value
+            })
+        })
 
         console.log(sortedPricesObj)
-        const copyArr= this.state.pricesObj
-        copyArr[0] = sortedPricesObj
+        let copyArr= this.state.pricesObj
+        // copyArr[0] = sortedPricesObj
+        copyArr = sortedPricesObj.slice(0)
         this.setState({pricesObj:copyArr});
        
     }
 
     render() {
-        
         let output = null
         if(this.state.loading){
-           output = <div class="lds-circle"><div></div></div>
+           output = <div className="lds-circle"><div></div></div>
         }
         else if(!this.state.loading){
             output = (
                 <div>
-                      {this.state.pricesObj.map(obj => (
-                           <TabPanel>
-                                {obj.map(o => <PriceDisplay price={o.price} name={o.name}/> )}
+                      {this.state.pricesObj.map((obj,i) => (
+                           <TabPanel key={i}>
+                                {obj.map((o,j) => <PriceDisplay key={j} price={o.price} name={o.name}/> )}
                            </TabPanel> 
-                      ))}
+                      ))
+                     }
                 </div>
             )
+            
         }
         return (
             <div>
-                <label style={{'font-size':'20px'}}> 
-                   <strong>Price Filter</strong>  <input type="text"   onChange={this.handleChange} />
+                <label style={{'fontSize':'20px'}}> 
+                   <strong>Price Filter</strong>  
+                   <input type="text"   onChange={this.handleChange} />
         
                 </label>
                 <Tabs>
